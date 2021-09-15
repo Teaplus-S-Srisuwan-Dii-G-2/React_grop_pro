@@ -2,11 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Movie from './Component/Movie'
+import MovieSelect from './Component/MovieSelect'
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  
+    {/* <Movie/> */}
+    <MovieSelect/>
   </React.StrictMode>,
   document.getElementById('root')
 );
