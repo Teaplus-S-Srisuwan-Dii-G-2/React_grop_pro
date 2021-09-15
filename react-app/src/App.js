@@ -1,17 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './features/Navbar';
+import Footer from './features/Footer';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      
-        <img src="/image/Naruto.jpg" />
-   
-
-        
-      </header>
-    </div>
+    <>
+    <Navbar />
+    <Footer />
+    </>
   );
 }
 
