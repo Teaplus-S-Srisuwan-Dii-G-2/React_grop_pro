@@ -9,7 +9,7 @@ export default function NowPlaying({ movie,name }) {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 1
   };
   return (

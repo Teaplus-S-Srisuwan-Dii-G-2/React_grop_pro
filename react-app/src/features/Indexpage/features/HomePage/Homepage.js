@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Axios from "axios";
-import NowPlaying from "./nowplaying";
+import NowPlaying from "./nowplaying/nowplaying.js";
 import { HomeWrapper } from "./style";
 
 export default function HomePage() {

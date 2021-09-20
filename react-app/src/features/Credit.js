@@ -17,6 +17,7 @@ const Credit = () => {
                         src="./public/image/fb.png"
                         width="20"
                         height="20"
+                        className="footer-image"
                         />
                     </div>
                     <div className = "col">
@@ -24,6 +25,7 @@ const Credit = () => {
                         src="./public/image/ig.png"
                         width="20"
                         height="20"
+                        className="footer-image"
                         />
                     </div>
                     <div className = "col">
@@ -31,6 +33,7 @@ const Credit = () => {
                         src="./public/image/tw.png"
                         width="20"
                         height="20"
+                        className="footer-image"
                         />
                     </div>
                 </div>
