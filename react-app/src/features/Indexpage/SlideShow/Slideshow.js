@@ -12,14 +12,14 @@ function ControlledCarousel() {
     <div>
       <Carousel fade>
         <Carousel.Item>
-          <img className="d-block w-100" src="https://i2.wp.com/fiz-x.com/wp-content/uploads/2014/01/Capture_Upload18.jpg?resize=800%2C400" alt="First slide" />
+          <img className="d-block w-100" src="https://s4.anilist.co/file/anilistcdn/media/anime/banner/114129-ZsLDkdwaYeJY.jpg" alt="First slide" />
           <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTpKFg1Kz5meLc-QYPp5bWIKSonkCzYFD8Kg&usqp=CAU" alt="Second slide" />
+          <img className="d-block w-100" src="https://s4.anilist.co/file/anilistcdn/media/anime/banner/124194-IB2X2IdALUYB.jpg" alt="Second slide" />
 
           <Carousel.Caption>
             <h3>Second slide label</h3>
@@ -27,7 +27,7 @@ function ControlledCarousel() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src="https://inspirationtuts.com/wp-content/uploads/2021/03/04-3.jpg" alt="Third slide" />
+          <img className="d-block w-100" src="https://s4.anilist.co/file/anilistcdn/media/anime/banner/11061-8WkkTZ6duKpq.jpg" alt="Third slide" />
 
           <Carousel.Caption>
             <h3>Third slide label</h3>
