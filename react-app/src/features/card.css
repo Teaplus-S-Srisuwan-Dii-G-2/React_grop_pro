@@ -1,0 +1,12 @@
+.container-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+h3 {
+    margin-left: 8rem;
+    margin-top: 2rem;
+}
