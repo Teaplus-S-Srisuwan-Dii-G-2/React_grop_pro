@@ -1,6 +1,6 @@
 import Navbar from './features/Navbar';
 import Credit from './features/Credit';
-import Homepage from './features/Indexpage/features/HomePage';
+import Homepage from './features/Indexpage/features/HomePage/Homepage';
 import Slidepage from './features/Indexpage/features/Slideshow';
 
 
