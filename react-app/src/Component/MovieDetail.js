@@ -43,6 +43,8 @@ function AnimeDetail() {
 							<div className="card-content">
 								<div className="card-title">
 									<p >{anime.titles.en}</p>
+									<p >{anime.titles.jp}</p>
+
 								</div>
 								<div className="card-image">
 									<img src={anime.cover_image} />
@@ -50,7 +52,11 @@ function AnimeDetail() {
 								</div>
 								
 								<div className="card-text">
-								<html>{anime.descriptions.en}</html>
+
+								<p>{anime.descriptions.en}</p>
+								<ul>
+<li></li>
+								</ul>
 
 								</div>
 							
