@@ -7,8 +7,10 @@ import Credit from './features/Credit';
 import Homepage from './features/Indexpage/features/HomePage/Homepage';
 import Slidepage from './features/Indexpage/features/HomePage/SlideShow/Slideshow';
 import MovieDetail from './Component/MovieDetail';
-import Accoud from './features/Account';
+import Account from './features/user/Account';
 import AnimeSelect from './Component/AnimeSelect'
+import UserDetail from './features/user/Userdata';
+
 
 
 function App() {
@@ -16,8 +18,11 @@ function App() {
     <>
       <Navbar />
       <Switch>
-        <Route path="/accoud">
-          <Accoud />
+        <Route path="/account">
+          <Account />
+        </Route>
+        <Route path="/user">
+          <UserDetail />
         </Route>
         <Route path="/animeselect/:id">
           <AnimeSelect />
