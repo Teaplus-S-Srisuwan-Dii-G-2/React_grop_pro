@@ -1,93 +1,57 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import './MovieDetail.css'
 import { Link } from 'react-router-dom';
+import anime from './anime'
 
 
 
-function AnimeDetail() {
-	const [topAnime, SetTopAnime] = useState([]);
 
+function AnimeDetail( ) {
+	const animes = useSelector((state) => state.animes);
+  	const dispatch = useDispatch();
 
 	const GetTopAnime = async () => {
-
-		const temp = await fetch(`https://api.aniapi.com/v1/anime`)
-
-
-
-
+		const anime = await fetch(`https://api.aniapi.com/v1/anime`)
 			.then(res => res.json());
-
-		SetTopAnime(temp.data.documents);
+		dispatch(fetchProducts(anime.data.data));
 	}
-
-
 
 	useEffect(() => {
 		GetTopAnime();
 	}, []);
 
 	return (
-
-
 		<main>
-<center className="animed-topic">
-		<p className="animed-topic-title">Anime Detail</p>
-</center>
-			
-
-			<div className="anime-row">
-			
-				{topAnime.map(anime => (
-
-					<div className="animed">
-
-						<div className="animed-content">
-							<div className="animed-title">
-								<ul>
-<li>	<p >{anime.titles.en} </p></li>
-<li>	<p className="animed-title-jp">({anime.titles.jp})</p></li>
-
-
-								</ul>
-							
-								<br/>
-			
-								
-
-							</div>
-							<div className="animed-image">
-								<img src={anime.cover_image} />
-
-							</div>
-
-							<div className="animed-text">
-
+				<h3>Top Anime</h3>
+				<div className="anime-row">
+					{anime.map(anime => (
+						<Link to={`/animeselect/${anime.mal_id}`}>
+						<div className="card">
+							<div className="card-content">
+								<div className="card-title">
+									<p >{anime.titles.en}</p>
+									<p >{anime.titles.jp}</p>
+								</div>
+								<div className="card-image">
+									<img src={anime.cover_image} />
+								</div>
+								<div className="card-text">
 								<p>{anime.descriptions.en}</p>
 								<ul>
-									<li></li>
+<li></li>
 								</ul>
-
+								</div>
 							</div>
-
-
-
-
-						</div>
-
-						<Link to={`/animeselect/${anime.mal_id}`}>
 							<button class="button" >
 								<a href={anime.trailer_url}><span>Find out more</span></a>
 							</button>
-
+						</div>
 						</Link>
-
-					</div>
-
-
-				))}
-			</div>
-
+					))}
+				</div>
+			
 		</main>
 	)
 }
