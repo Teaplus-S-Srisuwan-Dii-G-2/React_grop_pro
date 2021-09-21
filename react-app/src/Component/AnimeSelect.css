@@ -75,7 +75,7 @@ ul li{
   
 }
 
-img,iframe{
+.anime-image img,iframe{
     border: solid 20px transparent;
     border-radius: 30px;
     width: 30%;
