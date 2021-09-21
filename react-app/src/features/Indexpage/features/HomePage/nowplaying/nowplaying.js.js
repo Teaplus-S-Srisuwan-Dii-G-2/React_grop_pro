@@ -21,6 +21,7 @@ export default function NowPlaying({ movie,name }) {
       <Slider {...settings}>
         {movie.map(function(movie) {
           return (
+          
             <a href={`/animeselect/${movie.id}`}>
             <React.Fragment>
                 <Col>

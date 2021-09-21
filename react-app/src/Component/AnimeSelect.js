@@ -7,17 +7,10 @@ import { useState, useEffect } from 'react';
 const baseURL = `https://api.aniapi.com/v1/anime/?mal_id=42938`;
 
 function AnimeSelect() {
-   
+
     const [topAnime, SetTopAnime] = useState([]);
-
-
     const GetTopAnime = async () => {
-
         const temp = await fetch(baseURL)
-
-
-
-
             .then(res => res.json());
 
         SetTopAnime(temp.data.documents);
@@ -44,27 +37,27 @@ function AnimeSelect() {
 
             {/* <div className="anime-row"> */}
             {topAnime.map(anime => (
-                <div className="card">
+                <div className="anime">
 
 
 
-                    <div className="card-banner">
+                    <div className="anime-banner">
                         <img src={anime.banner_image} />
 
                     </div>
-                    <div className="card-title">
+                    <div className="anime-title">
                         <p >{anime.titles.en}<br />( {anime.titles.jp}) </p>
 
 
                     </div>
 
-                    <div className="card-content">
-                        < div className="card-image">
+                    <div className="anime-content">
+                        < div className="anime-image">
 
                             <img src={anime.cover_image} />
                          
                         </div>
-                        < div className="card-text">
+                        < div className="anime-text">
                             <ul>
                                 <li className="li-score"><p><b>Score: </b>{anime.score} / 100</p></li>
                                 <li><p><b>Description : </b>{anime.descriptions.en}</p></li>
