@@ -3,7 +3,8 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './MovieDetail.css'
 import { Link } from 'react-router-dom';
-import anime from './anime'
+import {fetchProducts} from './anime/actions'
+
 
 
 
@@ -15,7 +16,7 @@ function AnimeDetail( ) {
 	const GetTopAnime = async () => {
 		const anime = await fetch(`https://api.aniapi.com/v1/anime`)
 			.then(res => res.json());
-		dispatch(fetchProducts(anime.data.data));
+		dispatch(fetchProducts(anime.data.document));
 	}
 
 	useEffect(() => {
@@ -26,7 +27,7 @@ function AnimeDetail( ) {
 		<main>
 				<h3>Top Anime</h3>
 				<div className="anime-row">
-					{anime.map(anime => (
+					{animes.map(anime => (
 						<Link to={`/animeselect/${anime.mal_id}`}>
 						<div className="card">
 							<div className="card-content">
