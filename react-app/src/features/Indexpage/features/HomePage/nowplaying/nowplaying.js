@@ -3,7 +3,8 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./nowplay.css"
+import { Link } from 'react-router-dom';
+
 export default function NowPlaying({ movie,name }) {
   var settings = {
     dots: false,
@@ -21,22 +22,21 @@ export default function NowPlaying({ movie,name }) {
       <Slider {...settings}>
         {movie.map(function(movie) {
           return (
-          
-            <a href={`/animeselect/${movie.id}`}>
+            <Link to={`/animeselect/${movie.mal_id}`}>
             <React.Fragment>
                 <Col>
                   <Card>
-                    <Card.Img className="area-1"
+                    <Card.Img
                       variant="top"
                       src={movie.cover_image}
                     />
-                    <Card.Body className="area-2">
+                    <Card.Body>
                       <span>{movie.titles.en}</span>
                     </Card.Body>
                   </Card>
                 </Col>
             </React.Fragment>
-            </a>
+            </Link>
           );
         })}
       </Slider>

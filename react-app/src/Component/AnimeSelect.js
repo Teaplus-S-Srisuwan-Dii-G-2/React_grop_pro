@@ -1,26 +1,25 @@
-import { Switch, Route } from 'react-router-dom';
-import React from 'react'
+
+import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 // export default AnimeSee;
 import './AnimeSelect.css'
-import { useState, useEffect } from 'react';
-// import axios from 'axios';
-const baseURL = `https://api.aniapi.com/v1/anime/?mal_id=42938`;
+import Axios from 'axios';
+
 
 function AnimeSelect() {
-
+    const { id } = useParams();
     const [topAnime, SetTopAnime] = useState([]);
     const GetTopAnime = async () => {
-        const temp = await fetch(baseURL)
-            .then(res => res.json());
+        const temp = await Axios.get(`https://api.aniapi.com/v1/anime/?mal_id=${id}`)
 
-        SetTopAnime(temp.data.documents);
+        SetTopAnime(temp.data.data.documents);
     }
 
 
 
     useEffect(() => {
         GetTopAnime();
-    });
+    },[]);
 
     return (
 
@@ -29,7 +28,7 @@ function AnimeSelect() {
 
 
 <p>
-    https://api.aniapi.com/v1/anime/?mal_id=39486<br/>
+    https://api.aniapi.com/v1/anime/?mal_id={id}<br/>
     https://api.aniapi.com/v1/anime/?mal_id= จากหน้า AnimeDetail.js<br/>
 
 </p>
