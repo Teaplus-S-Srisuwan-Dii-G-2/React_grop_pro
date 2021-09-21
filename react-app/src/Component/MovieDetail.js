@@ -12,7 +12,7 @@ function AnimeDetail() {
 	const GetTopAnime = async () => {
 
 		const temp = await fetch(`https://api.aniapi.com/v1/anime`)
-		
+
 
 
 
@@ -31,52 +31,63 @@ function AnimeDetail() {
 
 
 		<main>
-		
-				<h3>Top Anime</h3>
+<center className="animed-topic">
+		<p className="animed-topic-title">Anime Detail</p>
+</center>
+			
 
-				<div className="anime-row">
-					{topAnime.map(anime => (
-						<Link to={`/animeselect/${anime.mal_id}`}>
-						<div className="card">
+			<div className="anime-row">
+			
+				{topAnime.map(anime => (
 
-							<div className="card-content">
-								<div className="card-title">
-									<p >{anime.titles.en}</p>
-									<p >{anime.titles.jp}</p>
+					<div className="animed">
 
-								</div>
-								<div className="card-image">
-									<img src={anime.cover_image} />
+						<div className="animed-content">
+							<div className="animed-title">
+								<ul>
+<li>	<p >{anime.titles.en} </p></li>
+<li>	<p className="animed-title-jp">({anime.titles.jp})</p></li>
 
-								</div>
+
+								</ul>
+							
+								<br/>
+			
 								
-								<div className="card-text">
+
+							</div>
+							<div className="animed-image">
+								<img src={anime.cover_image} />
+
+							</div>
+
+							<div className="animed-text">
 
 								<p>{anime.descriptions.en}</p>
 								<ul>
-<li></li>
+									<li></li>
 								</ul>
-
-								</div>
-							
-
-
 
 							</div>
 
 
+
+
+						</div>
+
+						<Link to={`/animeselect/${anime.mal_id}`}>
 							<button class="button" >
 								<a href={anime.trailer_url}><span>Find out more</span></a>
 							</button>
 
-
-
-						</div>
 						</Link>
 
-					))}
-				</div>
-			
+					</div>
+
+
+				))}
+			</div>
+
 		</main>
 	)
 }
