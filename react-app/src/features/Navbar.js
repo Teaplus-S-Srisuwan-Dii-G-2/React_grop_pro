@@ -15,6 +15,7 @@ function navbar({className}) {
     <Container>
     <Navbar.Brand href="#home">AnimeList</Navbar.Brand>
     <Nav className="me-auto">
+    <Link to="/topanime"><Nav.Link href="/topanime">Top Anime</Nav.Link></Link>
       <Link to="/"><Nav.Link href="/">movie de</Nav.Link></Link>
       <Link to="/accoud"><Nav.Link href="/accoud">accoud</Nav.Link></Link>
     </Nav>
