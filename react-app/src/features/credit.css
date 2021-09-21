@@ -1,4 +1,5 @@
 .main-footer {
+    margin-top: 10%;
     color: white;
     background-color: black;
     padding-top: 1em;
@@ -9,7 +10,7 @@
 }
 p.col-sm{
     display:flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: flex-end
 }
 
@@ -20,7 +21,9 @@ p.col-sm{
 }
 
 
-.row > img{
-  border-radius: 20px;
+.col img.footer-image{
+    width: 100px;
+    height: 120px;
+ border-radius: 20px;
    
 }

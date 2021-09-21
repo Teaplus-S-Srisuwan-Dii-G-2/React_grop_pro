@@ -42,7 +42,7 @@ function AnimeSelect() {
 
 
                     <div className="anime-banner">
-                        <img src={anime.banner_image} />
+                        <img className="anime-image" src={anime.banner_image} />
 
                     </div>
                     <div className="anime-title">
