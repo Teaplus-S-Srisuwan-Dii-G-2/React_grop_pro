@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 function ControlledCarousel() {
   const [Anime, setAnime] = useState([]);

@@ -14,12 +14,14 @@ export default function NowPlaying({ movie,name }) {
   };
   return (
     <Container>
+      
       <div className="clearfix mt-5 mb-2">
         <h4 className="float-left">{name}</h4>
       </div>
       <Slider {...settings}>
         {movie.map(function(movie) {
           return (
+            <a href={`/animeselect/${movie.id}`}>
             <React.Fragment>
                 <Col>
                   <Card>
@@ -33,9 +35,11 @@ export default function NowPlaying({ movie,name }) {
                   </Card>
                 </Col>
             </React.Fragment>
+            </a>
           );
         })}
       </Slider>
+    
     </Container>
   );
 }
