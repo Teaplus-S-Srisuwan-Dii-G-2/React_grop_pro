@@ -13,11 +13,15 @@ function navbar({className}) {
     return (
       <Navbar bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand href="#home">AnimeList</Navbar.Brand>
-    <Nav className="me-auto">
-    <Link to="/topanime"><Nav.Link href="/topanime">Top Anime</Nav.Link></Link>
-      <Link to="/"><Nav.Link href="/">movie de</Nav.Link></Link>
-      <Link to="/accoud"><Nav.Link href="/accoud">accoud</Nav.Link></Link>
+    
+   
+    <Nav className="me-auto"> 
+    <Link to="/"><Nav.Link href="/">Anime List</Nav.Link></Link>
+    <Link to="/topanime"><Nav.Link href="/topanime">Anime Detail</Nav.Link></Link>
+      {/* <Link to="/"><Nav.Link href="/">Anime Detail</Nav.Link></Link> */}
+      <Link to="/account"><Nav.Link href="/account">Login</Nav.Link></Link>
+      <Link to="/user"><Nav.Link href="/user">Profile</Nav.Link></Link>
+
     </Nav>
     </Container>
   </Navbar>
