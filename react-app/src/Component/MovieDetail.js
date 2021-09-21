@@ -1,10 +1,7 @@
 import React from 'react'
-
-
-
-
 import { useState, useEffect } from 'react';
 import './MovieDetail.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -39,6 +36,7 @@ function AnimeDetail() {
 
 				<div className="anime-row">
 					{topAnime.map(anime => (
+						<Link to={`/animeselect/${anime.mal_id}`}>
 						<div className="card">
 
 							<div className="card-content">
@@ -74,7 +72,7 @@ function AnimeDetail() {
 
 
 						</div>
-
+						</Link>
 
 					))}
 				</div>
