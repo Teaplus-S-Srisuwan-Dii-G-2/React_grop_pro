@@ -15,8 +15,8 @@ function navbar({className}) {
     <Container>
     <Navbar.Brand href="#home">AnimeList</Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link href="#home">movie de</Nav.Link>
-      <Nav.Link href="#features">accoud</Nav.Link>
+      <Link to="/"><Nav.Link href="/">movie de</Nav.Link></Link>
+      <Link to="/accoud"><Nav.Link href="/accoud">accoud</Nav.Link></Link>
     </Nav>
     <Form className="d-flex">
       <FormControl
