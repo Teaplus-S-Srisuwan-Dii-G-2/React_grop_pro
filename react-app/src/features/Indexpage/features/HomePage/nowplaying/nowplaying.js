@@ -22,7 +22,7 @@ export default function NowPlaying({ movie,name }) {
       <Slider {...settings}>
         {movie.map(function(movie) {
           return (
-            <Link to={`/animeselect/${movie.id}`}>
+            <Link to={`/animeselect/${movie.mal_id}`}>
             <React.Fragment>
                 <Col>
                   <Card>
