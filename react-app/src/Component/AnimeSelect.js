@@ -26,12 +26,12 @@ function AnimeSelect() {
 
         <main>
 
-
+{/* 
 <p>
     https://api.aniapi.com/v1/anime/?mal_id={id}<br/>
     https://api.aniapi.com/v1/anime/?mal_id= จากหน้า AnimeDetail.js<br/>
 
-</p>
+</p> */}
       
 
             {/* <div className="anime-row"> */}
@@ -88,9 +88,9 @@ function AnimeSelect() {
                   
                 
 
-   <button class="button" >
+   {/* <button class="button" >
                         <a href={anime.trailer_url}><span>Find out more</span></a>
-                    </button> 
+                    </button>  */}
 
 
 </div>

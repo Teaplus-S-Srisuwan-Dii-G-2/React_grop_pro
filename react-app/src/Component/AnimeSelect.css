@@ -1,7 +1,7 @@
 
 .anime{
     height: max-content;
-    width: 1500px;
+    width: 1300px;
     margin: 0 auto;
    
 }
@@ -75,7 +75,7 @@ ul li{
   
 }
 
-.anime img,iframe{
+.anime-img img,iframe{
     border: solid 20px transparent;
     border-radius: 30px;
     width: 30%;
