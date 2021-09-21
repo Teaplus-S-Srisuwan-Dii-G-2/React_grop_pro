@@ -22,10 +22,14 @@ function App() {
         <Route path="/animeselect/:id">
           <AnimeSelect />
         </Route>
+        <Route path="/topanime">
+          <MovieDetail />
+        </Route>
         <Route path="/">
           <Slidepage />
           <Homepage />
         </Route>
+        
       </Switch>
       <Credit />
     </>
