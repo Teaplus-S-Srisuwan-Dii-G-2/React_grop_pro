@@ -8,7 +8,6 @@ export default function HomePage() {
   const [Action, setAction] = useState([]);
   const [Comedy, setComedy] = useState([]);
   const [Drama, setDrama] = useState([]);
-
   useEffect(() => {
     getAllMovies();
   }, []);
