@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProducts } from './anime/actions'
 
+
+
+
 function AnimeDetail() {
   //   const [topAnime, SetTopAnime] = useState([]);
   const animes = useSelector((state) => state.animes);
@@ -20,6 +23,18 @@ function AnimeDetail() {
 
   useEffect(() => {
     GetTopAnime();
+
+	async function likeAnime( anime_id ) {
+    // POST request using fetch with async/await
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ anime_id:anime_id})
+    };
+    const response = await fetch('http://localhost:1337/favor-animes', requestOptions);
+    const data = await response.json();
+    // this.setState({ postId: data.id });
+	}
   }, []);
 
   return (
@@ -58,10 +73,8 @@ function AnimeDetail() {
               </div>
             </div>
 
-<button class="button-like">
-              <a href={anime.trailer_url}>
+<button class="button-like" onClick={likeAnime(anime.mal_id)}>
                 <span>LIke</span>
-              </a>
             </button>
           
             <Link to={`/animeselect/${anime.mal_id}`}>
