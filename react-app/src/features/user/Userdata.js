@@ -1,44 +1,40 @@
-import React from 'react';
-import { Form } from 'react-bootstrap';
+import React from "react";
+import Image from "react-bootstrap/Image";
 // import { CloseButton } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './account.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./account.css";
 // import Form from 'react-bootstrap/Form'
-import {Button} from 'react-bootstrap';
+import { Button } from "react-bootstrap";
+import Row from 'react-bootstrap/Row'
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
 const Userdata = () => {
-
   return (
-
-    <div className='account'>
+    <div className="account">
       <h1>User</h1>
       <hr />
-      <Form>
-  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+      <Container >
+        <Row className="justify-content-center">
+        <Col xs={{ order: 'last' }}>First, but last</Col>
+          <Col >
+            <Image
+              src="https://artsofcarvercounty.org/wp-content/uploads/2015/01/SteveProfile-171x180.png"
+              rounded
+            />
+          </Col>
+          <Col xs={{ order: 'first' }}>Third, but first</Col>
+        </Row>
+        <Row >
+          <h2 >Tom Smith</h2>
+        </Row>
+      </Container>
+      <h1>Favorite Anime</h1>
+      <Container>
 
-    <Form.Label>Name</Form.Label>
-    <Form.Control type="email" placeholder="Mr.Ant    Zebar" />
-  </Form.Group>
-  <>
-  <Form.Label htmlFor="exampleColorInput">Icon Color</Form.Label>
-  <Form.Control
-    type="color"
-    id="exampleColorInput"
-    defaultValue="#00000"
-    title="Choose your color"
-  />
-</>
-  <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Label >Example textarea</Form.Label>
-    <Form.Control as="textarea" rows={3} placeholder="One pice , Naruto , Kiminonawa , Doremon" />
-  </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-</Form>
+      </Container>
       <hr />
     </div>
-
-  )
-}
+  );
+};
 
 export default Userdata;
