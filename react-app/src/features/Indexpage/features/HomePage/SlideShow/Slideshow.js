@@ -1,40 +1,44 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
-import styled from 'styled-components';
-import { Link } from "react-router-dom";
-import '../nowplaying/nowplay.css'
+import styled from "styled-components";
+import "../nowplaying/nowplay.css";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchProducts } from '../../../../../Component/anime/actions';
 function ControlledCarousel() {
-  const [Anime, setAnime] = useState([]);
+  const animes = useSelector((state) => state.animes);
+  const dispatch = useDispatch();
   useEffect(() => {
     getMovies();
   }, []);
-  const getMovies = async () =>{
-    const movie = await Axios.get('https://api.aniapi.com/v1/anime');
+  const getMovies = async () => {
+    const movie = await Axios.get("https://api.aniapi.com/v1/anime");
 
-    setAnime(movie.data.data.documents);
-  }
+    dispatch(fetchProducts(movie.data.data.documents));
+  };
   return (
     <div className="area-slide">
-      <Carousel fade >
-        {Anime.map(function(anime){
-          return(
+      <Carousel fade>
+        {animes.map(function (anime) {
+          return (
             <Carousel.Item>
-          <img className="img-slide d-block slidepigban" src={anime.banner_image}  />
-          <Carousel.Caption>
-            <h3>{anime.titles.en}</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-          )
+              <img
+                className="img-slide d-block slidepigban"
+                src={anime.banner_image}
+              />
+              <Carousel.Caption>
+                <h3>{anime.titles.en}</h3>
+              </Carousel.Caption>
+            </Carousel.Item>
+          );
         })}
-        
       </Carousel>
     </div>
   );
 }
 export default styled(ControlledCarousel)`
-.slidepigban{
-  height: 400px;
-      width: 100%!important;
-}
+  .slidepigban {
+    height: 400px;
+    width: 100% !important;
+  }
 `;

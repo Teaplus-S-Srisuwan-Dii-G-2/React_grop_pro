@@ -1,64 +1,75 @@
-import React from 'react'
-import { useEffect } from 'react';
+import React from "react";
+import { useState, useEffect } from "react";
+import "./MovieDetail.css";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-import './MovieDetail.css'
-import { Link } from 'react-router-dom';
 import {fetchProducts} from './anime/actions'
 
+function AnimeDetail() {
+//   const [topAnime, SetTopAnime] = useState([]);
+const animes = useSelector((state) => state.animes);
+const dispatch = useDispatch();
 
+  const GetTopAnime = async () => {
+    const temp = await fetch(`https://api.aniapi.com/v1/anime`).then((res) =>
+      res.json()
+    );
 
+    dispatch(fetchProducts(temp.data.documents));
+  };
 
+  useEffect(() => {
+    GetTopAnime();
+  }, []);
 
-function AnimeDetail( ) {
-	const animes = useSelector((state) => state.animes);
-  	const dispatch = useDispatch();
+  return (
+    <main>
+      <center className="animed-topic">
+        <p className="animed-topic-title">Anime Detail</p>
+      </center>
 
-	const GetTopAnime = async () => {
-		const anime = await fetch(`https://api.aniapi.com/v1/anime`)
-			.then(res => res.json());
-		dispatch(fetchProducts(anime.data.document));
-	}
+      <div className="anime-row">
+        {animes.map((anime) => (
+          <div className="animed">
+            <div className="animed-content">
+              <div className="animed-title">
+                <ul>
+                  <li>
+                    {" "}
+                    <p>{anime.titles.en} </p>
+                  </li>
+                  <li>
+                    {" "}
+                    <p className="animed-title-jp">({anime.titles.jp})</p>
+                  </li>
+                </ul>
 
-	useEffect(() => {
-		GetTopAnime();
-	}, []);
+                <br />
+              </div>
+              <div className="animed-image">
+                <img src={anime.cover_image} />
+              </div>
 
-	return (
-		<main>
-				<h3>Top Anime</h3>
-				<div className="anime-row">
-					{animes.map(anime => (
-						<Link to={`/animeselect/${anime.mal_id}`}>
-						<div className="card">
-							<div className="card-content">
-								<div className="card-title">
-									<p >{anime.titles.en}</p>
-									<p >{anime.titles.jp}</p>
-								</div>
-								<div className="card-image">
-									<img src={anime.cover_image} />
-								</div>
-								<div className="card-text">
-								<p>{anime.descriptions.en}</p>
-								<ul>
-<li></li>
-								</ul>
-								</div>
-							</div>
-							<button class="button" >
-								<a href={anime.trailer_url}><span>Find out more</span></a>
-							</button>
-						</div>
-						</Link>
-					))}
-				</div>
-			
-		</main>
-	)
+              <div className="animed-text">
+                <p>{anime.descriptions.en}</p>
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+
+            <Link to={`/animeselect/${anime.mal_id}`}>
+              <button class="button">
+                <a href={anime.trailer_url}>
+                  <span>Find out more</span>
+                </a>
+              </button>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </main>
+  );
 }
-
-
-
-
 
 export default AnimeDetail;
