@@ -8,25 +8,26 @@ import { Button } from "react-bootstrap";
 import Row from 'react-bootstrap/Row'
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
+import './userdata.css'
 const Userdata = () => {
   return (
     <div className="account">
       <h1>User</h1>
       <hr />
       <Container >
-        <Row className="justify-content-center">
-        <Col xs={{ order: 'last' }}>First, but last</Col>
-          <Col >
-            <Image
-              src="https://artsofcarvercounty.org/wp-content/uploads/2015/01/SteveProfile-171x180.png"
-              rounded
-            />
-          </Col>
-          <Col xs={{ order: 'first' }}>Third, but first</Col>
-        </Row>
-        <Row >
-          <h2 >Tom Smith</h2>
-        </Row>
+        <div className="flex-container">
+          <div className="user-item">
+
+            <div className="user-profile">
+
+              <img className="profile" src="https://artsofcarvercounty.org/wp-content/uploads/2015/01/SteveProfile-171x180.png" />
+            </div>
+
+
+            <h1>Tom Smith</h1>
+          </div>
+        </div>
+
       </Container>
       <h1>Favorite Anime</h1>
       <Container>
