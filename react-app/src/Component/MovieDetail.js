@@ -24,17 +24,7 @@ function AnimeDetail() {
   useEffect(() => {
     GetTopAnime();
 
-	async function likeAnime( anime_id ) {
-    // POST request using fetch with async/await
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ anime_id:anime_id})
-    };
-    const response = await fetch('http://localhost:1337/favor-animes', requestOptions);
-    const data = await response.json();
-    // this.setState({ postId: data.id });
-	}
+
   }, []);
 
   return (
@@ -73,7 +63,7 @@ function AnimeDetail() {
               </div>
             </div>
 
-<button class="button-like" onClick={likeAnime(anime.mal_id)}>
+<button class="button-like" onClick={()=>{likeAnime(anime.mal_id)}}>
                 <span>LIke</span>
             </button>
           
@@ -89,6 +79,18 @@ function AnimeDetail() {
       </div>
     </main>
   );
+}
+async function likeAnime( anime_id ) {
+  // // POST request using fetch with async/await
+  // const requestOptions = {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify({ anime_id:anime_id})
+  // };
+  // const response = await fetch('http://localhost:1337/favor-animes', requestOptions);
+  // const data = await response.json();
+  // // this.setState({ postId: data.id });
+  console.log('dd')
 }
 
 export default AnimeDetail;
