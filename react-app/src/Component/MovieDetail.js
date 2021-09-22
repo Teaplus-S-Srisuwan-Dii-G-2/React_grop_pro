@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import "./MovieDetail.css";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-import {fetchProducts} from './anime/actions'
+import { fetchProducts } from './anime/actions'
 
 function AnimeDetail() {
-//   const [topAnime, SetTopAnime] = useState([]);
-const animes = useSelector((state) => state.animes);
-const dispatch = useDispatch();
+  //   const [topAnime, SetTopAnime] = useState([]);
+  const animes = useSelector((state) => state.animes);
+  const dispatch = useDispatch();
 
   const GetTopAnime = async () => {
     const temp = await fetch(`https://api.aniapi.com/v1/anime`).then((res) =>
@@ -58,13 +58,19 @@ const dispatch = useDispatch();
               </div>
             </div>
 
+<button class="button-like">
+              <a href={anime.trailer_url}>
+                <span>LIke</span>
+              </a>
+            </button>
+          
             <Link to={`/animeselect/${anime.mal_id}`}>
               <button class="button">
                 <a href={anime.trailer_url}>
                   <span>Find out more</span>
                 </a>
               </button>
-            </Link>
+            </Link>  
           </div>
         ))}
       </div>
