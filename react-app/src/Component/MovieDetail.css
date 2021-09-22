@@ -101,7 +101,9 @@
   
     flex-grow: 1;
   }
-  
+  .animed-content{
+    margin-bottom: 20%;
+  }
   /* .anime-row .card > .card-image {
     flex-basis: 25rem;
     flex-shrink: 0;
@@ -116,9 +118,7 @@
   
   }
   
- .button-like{
-  background-color: #61f70a;
- }
+ 
   
   .animed-image img {
     
@@ -145,26 +145,48 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  
-  button.button {
-    /* margin-top: 80px; */
-    display: inline-block;
-    border-radius: 4px;
+  .animed-button{
+   
+    width: 100%;
+    grid-gap:2%;
+    display: grid;
+    grid-template-columns: 30% 68%;
+    
+  }
+  button.button{
+    /* display: inline-block; */
+    /* border-radius: 4px; */
     background-color: #e61f1f;
     border: none;
     color: #FFFFFF;
     text-align: center;
     font-size: 20px;
-    padding: 10px;
-    margin-bottom: 10px;
-  
+    /* padding: 10px; */
+    /* margin-bottom: 10px; */
     width: 100%;
     transition: all 0.5s;
     cursor: pointer;
    
   }
-  
-  .button span {
+  .icon{
+    width: 100%;
+  }
+  .icon img{
+    width: 100%;
+    align-items: center;
+  }
+
+ /* .button-like img.icon{
+    width: 10px;
+    height: 10px;
+    background: #000;
+  } */
+  .button-like{
+    
+    /* background-color: #f31dac; */
+   
+   }
+  .button span,.button-like {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -187,6 +209,10 @@
   .button:hover span:after {
     opacity: 1;
     right: 0;
+  }
+  .icon img:hover{
+    transition: 0.5s;
+   padding: 30%;
   }
   
   
