@@ -49,11 +49,6 @@
   .anime-row {
     width: 1400px;
     margin: 0 auto;
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: stretch;
-    align-content: stretch; */
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -104,19 +99,12 @@
   .animed-content{
     margin-bottom: 20%;
   }
-  /* .anime-row .card > .card-image {
-    flex-basis: 25rem;
-    flex-shrink: 0;
-    overflow-y: hidden;
-    background-color: rgb(97, 88, 88);
-  
-  } */
-  
-  main {
+
+  /* main {
     margin: 0;
     overflow-x: hidden;
   
-  }
+  } */
   
  
   
@@ -146,17 +134,25 @@
     text-align: center;
   }
   .animed-button{
-   
-    width: 100%;
+
+    
     grid-gap:2%;
+    width: 100%;
     display: grid;
     grid-template-columns: 30% 68%;
+     /* grid-template-columns: 1fr 1fr; */
+    align-items: center;
+    justify-content: center;
     
   }
-  button.button{
-    /* display: inline-block; */
+
+  .animed-button .button{
+    width: 100%;
+  }
+  button.button-click{
+    display: inline-block;
     /* border-radius: 4px; */
-    background-color: #e61f1f;
+    background-color: #0c91eb;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -170,30 +166,24 @@
   }
   .icon{
     width: 100%;
+    border-radius: 20px;
   }
   .icon img{
     width: 100%;
     align-items: center;
+    border-radius: 50px;
   }
 
- /* .button-like img.icon{
-    width: 10px;
-    height: 10px;
-    background: #000;
-  } */
-  .button-like{
-    
-    /* background-color: #f31dac; */
-   
-   }
-  .button span,.button-like {
+
+
+  .button-click span,.button-like {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  .button span:after {
+  .button-click span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -202,19 +192,21 @@
     transition: 0.5s;
   }
   
-  .button:hover span {
+  .button-click:hover span {
     padding-right: 50px;
   }
   
-  .button:hover span:after {
+  .button-click:hover span:after {
     opacity: 1;
     right: 0;
   }
   .icon img:hover{
     transition: 0.5s;
    padding: 30%;
-  }
   
+
+  }
+ 
   
   
   
