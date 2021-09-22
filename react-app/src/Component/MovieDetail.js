@@ -6,6 +6,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchProducts } from './anime/actions'
 
 
+
+
 function AnimeDetail() {
   //   const [topAnime, SetTopAnime] = useState([]);
   const animes = useSelector((state) => state.animes);
@@ -21,11 +23,22 @@ function AnimeDetail() {
 
   useEffect(() => {
     GetTopAnime();
+
+	async function likeAnime( anime_id ) {
+    // POST request using fetch with async/await
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ anime_id:anime_id})
+    };
+    const response = await fetch('http://localhost:1337/favor-animes', requestOptions);
+    const data = await response.json();
+    // this.setState({ postId: data.id });
+	}
   }, []);
 
   return (
-
-    <main>  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <main>
       <center className="animed-topic">
         <p className="animed-topic-title">Anime Detail</p>
       </center>
@@ -58,27 +71,19 @@ function AnimeDetail() {
                   <li></li>
                 </ul>
               </div>
-
             </div>
-            <div className="animed-button">
-              <div class="icon">
-                <img src="https://pnglux.com/wp-content/uploads/2021/04/1617443306_Like-PNG-High-Quality-Image.png" />
 
-                {/* <img classs="icon" src="https://pnglux.com/wp-content/uploads/2021/04/1617443306_Like-PNG-High-Quality-Image.png"/> */}
-              </div>
-
+<button class="button-like" onClick={likeAnime(anime.mal_id)}>
+                <span>LIke</span>
+            </button>
+          
+            <Link to={`/animeselect/${anime.mal_id}`}>
               <button class="button">
-                <Link to={`/animeselect/${anime.mal_id}`}>
-
-                  <a href={anime.trailer_url}>
-                    <span>Find out more</span>
-                  </a>
-
-                </Link>   </button>
-
-            </div>
-
-
+                <a href={anime.trailer_url}>
+                  <span>Find out more</span>
+                </a>
+              </button>
+            </Link>  
           </div>
         ))}
       </div>
