@@ -7,6 +7,8 @@
 .animed{
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
+  padding: 10%;
  
 }
 .animed-topic-title{
@@ -14,21 +16,26 @@
   font-weight: bolder;
 }
    .anime-row{
-    width: 1800px;
+    width: 1700px;
     margin: 0 auto;
    }
-  .animed-image{
-    width: 100%;
-    height: 480px;
-    background-color: rgb(132, 132, 148);
-  }
+   .animed-text{
+     height: 300px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     margin-top: 10%;
+     font: 20 sans-serif;
+     padding: 10px;
+   }
   
-  .animed-title{
-    width: 100%;
-    height:10%;
-  }
+
   .animed-text p{
     font-size: 22px;
+   
+      word-wrap: break-word;
+      text-align: justify;
+  
+  
   }
   .animed-content .animed-title p{
     font: 2em sans-serif;
@@ -36,18 +43,10 @@
    text-align: center;
   }
   
-  .animed-image img{
-    width: 100%;
-    height: 500px;
- 
-  object-fit: cover;
-  } 
-  .animed-title p.animed-title-jp{
-    font-size: 15px;
-  }
+
   
   .anime-row {
-    width: 1400px;
+    width: 1800px;
     margin: 0 auto;
     display: grid;
     grid-gap: 20px;
@@ -60,17 +59,9 @@
     flex-basis: 20rem;
     flex-shrink: 0;
   }
-  .animed-title p{
-   font: 2em sans-serif;
-   text-align: center;
-   
-  }
+ 
   
-  .animed-text{
-    margin-top: 10%;
-    font: 1em sans-serif;
-   /* text-align: center; */
-  }
+ 
   .anime-row .animed {
     align-content: stretch;
     display: flex;
@@ -82,14 +73,7 @@
     background-color: rgb(211, 211, 211);
   
   }
-  .animed-title{
-   
-    align-content: stretch;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: stretch;
-    flex-grow: 1;
-  }
+
   
   
   .anime-row .animed > .animed-content {
@@ -100,20 +84,10 @@
     margin-bottom: 20%;
   }
 
-  /* main {
-    margin: 0;
-    overflow-x: hidden;
-  
-  } */
-  
  
   
-  .animed-image img {
-    
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+ 
+ 
   a{
     color: rgb(255, 255, 255);
   }
@@ -140,7 +114,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: 30% 68%;
-     /* grid-template-columns: 1fr 1fr; */
     align-items: center;
     justify-content: center;
     
@@ -151,14 +124,11 @@
   }
   button.button-click{
     display: inline-block;
-    /* border-radius: 4px; */
     background-color: #0c91eb;
     border: none;
     color: #FFFFFF;
     text-align: center;
     font-size: 20px;
-    /* padding: 10px; */
-    /* margin-bottom: 10px; */
     width: 100%;
     transition: all 0.5s;
     cursor: pointer;
@@ -169,13 +139,20 @@
     border-radius: 20px;
   }
   .icon img{
-    width: 100%;
+    width: 70%;
     align-items: center;
     border-radius: 50px;
   }
 
 
-
+  button.btt{
+    background: rgb(73, 73, 73);
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
   .button-click span,.button-like {
     cursor: pointer;
     display: inline-block;
@@ -191,9 +168,15 @@
     right: -20px;
     transition: 0.5s;
   }
-  
+  button:hover{
+    background-color: rgb(0, 121, 241);
+  }
   .button-click:hover span {
     padding-right: 50px;
+  }
+  span.nextpage{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
   }
   
   .button-click:hover span:after {
@@ -206,7 +189,31 @@
   
 
   }
+  .animed-image{
+    width: 100%;
+    height: 500px;
+  }
+  
+  .animed-image img{
+    width: 100%;
+    height: 100%;
+   border-radius: 20px;
+  }
  
   
   
-  
+  .animed-title{
+ 
+    width: 100%;
+    height: 130px;
+    /* border: 1px solid #000000; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+ 
+  }
+
+    
+  /* .animed-image ul li p{
+
+  } */
