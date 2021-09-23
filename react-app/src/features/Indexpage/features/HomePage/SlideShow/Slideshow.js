@@ -17,6 +17,8 @@ function ControlledCarousel() {
     dispatch(fetchProducts(movie.data.data.documents));
   };
   return (
+    <>
+    {animes.length > 0 ? (
     <div className="area-slide">
       <Carousel fade>
         {animes.map(function (anime) {
@@ -34,6 +36,10 @@ function ControlledCarousel() {
         })}
       </Carousel>
     </div>
+    ) : (
+      <div>Loading....</div>
+    )}
+    </>
   );
 }
 export default styled(ControlledCarousel)`

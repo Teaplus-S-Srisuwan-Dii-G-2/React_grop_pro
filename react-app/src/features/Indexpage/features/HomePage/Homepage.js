@@ -31,9 +31,15 @@ export default function HomePage() {
   return (
     <>
     <HomeWrapper>
+    {Action.length > 0 ? (
+      <>
       <NowPlaying movie={Action} name={"Action"} />
       <NowPlaying movie={Comedy} name={"Comedy"}/>
       <NowPlaying movie={Drama} name={"Drama"}/>
+      </>
+      ) : (
+        <div>Loading Anime....</div>
+      )}
     </HomeWrapper>
     </>
   );
