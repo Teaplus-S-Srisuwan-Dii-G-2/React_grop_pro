@@ -17,8 +17,9 @@ p.col-sm{
     margin-top: 30px;
     margin-left: 200px;
 }
+
 .col img.footer-image{
-    width: 80px;
-    height: 70px;
+    width: 30px;
+    height: 30px;
     border-radius: 20px;
 }
