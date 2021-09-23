@@ -15,8 +15,8 @@ const Credit = () => {
                     <div className = "col">
                         <img 
                         src="/image/fb.png"
-                        width="50"
-                        height="50"
+                        width="20"
+                        height="20"
                         className="footer-image"
                         />
                     </div>
