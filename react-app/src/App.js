@@ -10,6 +10,7 @@ import MovieDetail from './Component/MovieDetail';
 import Account from './features/user/Account';
 import AnimeSelect from './Component/AnimeSelect'
 import UserDetail from './features/user/Userdata';
+import AnimeSearch from './Component/AnimeSearch';
 
 
 
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/topanime">
           <MovieDetail />
+        </Route>
+        <Route path="/search">
+          <AnimeSearch />
         </Route>
         <Route path="/">
           <Slidepage />

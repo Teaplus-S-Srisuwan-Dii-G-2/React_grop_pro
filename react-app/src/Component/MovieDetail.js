@@ -12,7 +12,7 @@ function AnimeDetail() {
   //   const [topAnime, SetTopAnime] = useState([]);
   const animes = useSelector((state) => state.animes);
   const dispatch = useDispatch();
-const urlPic='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLudBUAQNGPerdvGD3gHqObUr1mYm7lk383w&usqp=CAU'
+  const urlPic = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLudBUAQNGPerdvGD3gHqObUr1mYm7lk383w&usqp=CAU'
   const GetTopAnime = async () => {
     const temp = await fetch(`https://api.aniapi.com/v1/anime`).then((res) =>
       res.json()
@@ -56,7 +56,7 @@ const urlPic='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLudBUAQNGPe
               </div>
 
               <div className="animed-text">
-                <p>{anime.descriptions.en}</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{anime.descriptions.en}</p>
                 <ul>
                   <li></li>
                 </ul>
@@ -72,17 +72,17 @@ const urlPic='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLudBUAQNGPe
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />
 
               </div> */}
-              <div className="button">
 
-                <Link to={`/animeselect/${anime.mal_id}`}>
-                  <button class="button-click">
+<button className="btt">
+              <Link to={`/animeselect/${anime.mal_id}`}>
+                <div class="button-click">
 
-                    <span>Find out more</span>
+                  <span className="nextpage">Find out more</span>
 
-                  </button>
-                </Link> 
+                </div>
+              </Link>
 
-              </div>
+</button>
 
 
 
