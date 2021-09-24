@@ -15,19 +15,19 @@ const Credit = () => {
                     <div className = "col">
                         <img 
                         src="/image/fb.png"
-                        className="footer-image"
+                        className="footer-image1"
                         />
                     </div>
                     <div className = "col">
                         <img 
                         src="/image/ig1.png"
-                        className="footer-image"
+                        className="footer-image2"
                         />
                     </div>
                     <div className = "col">
                         <img   
                         src="/image/tw.png"
-                      className="footer-image"
+                      className="footer-image3"
                         />
                     </div>
                 </div>
