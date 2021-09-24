@@ -98,13 +98,19 @@ function AnimeSelect() {
               </ul>
             </div>
           </div>
-
-          <div className="anime-video">
+          {anime.trailer_url == undefined ? (
+            <>
+            </>
+          ) : (
+            <div className="anime-video">
             <h1>
               {anime.titles.en} | Official Trailer ({anime.season_year})
             </h1>
             <iframe src={anime.trailer_url}></iframe>
           </div>
+          )}
+        
+          
 
           {/* <button class="button" >
                         <a href={anime.trailer_url}><span>Find out more</span></a>
