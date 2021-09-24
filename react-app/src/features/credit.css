@@ -7,19 +7,36 @@
     bottom: 0;
     width: 100%;
 }
+
+.col h4 {
+    display:flex;
+    justify-content: center;
+}
+
 p.col-sm{
     display:flex;
     justify-content: center;
     align-items: flex-end
 }
 
-.footer-image {
+.footer-image1 {
     margin-top: 30px;
-    margin-left: 200px;
+    margin-left: 490px;
 }
 
-.col img.footer-image{
+.footer-image2 {
+    margin-top: 30px;
+    margin-left: 190px;
+}
+
+.footer-image3 {
+    margin-top: 30px;
+    margin-left: -100px;
+}
+
+.col img.footer-image1,img.footer-image2,img.footer-image3{
     width: 30px;
     height: 30px;
     border-radius: 20px;
+    margin-right: -150px;
 }
