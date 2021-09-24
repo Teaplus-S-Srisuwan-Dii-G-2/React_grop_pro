@@ -1,11 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./MovieDetail.css";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProducts } from './anime/actions'
-
-
 
 
 function AnimeDetail() {
@@ -17,7 +15,6 @@ function AnimeDetail() {
     const temp = await fetch(`https://api.aniapi.com/v1/anime`).then((res) =>
       res.json()
     );
-
     dispatch(fetchProducts(temp.data.documents));
   };
 
@@ -32,7 +29,6 @@ function AnimeDetail() {
       <center className="animed-topic">
         <p className="animed-topic-title">Anime Detail</p>
       </center>
-
       <div className="anime-row">
         {animes.map((anime) => (
           <div className="animed">
@@ -48,13 +44,11 @@ function AnimeDetail() {
                     <p className="animed-title-jp">({anime.titles.jp})</p>
                   </li>
                 </ul>
-
                 <br />
               </div>
               <div className="animed-image">
                 <img src={anime.cover_image} />
               </div>
-
               <div className="animed-text">
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{anime.descriptions.en}</p>
                 <ul>
@@ -65,12 +59,10 @@ function AnimeDetail() {
             <div className="animed-button">
               <div className="icon">
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />
-
               </div>
 
               {/* <div className="icon">
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />
-
               </div> */}
 
 <button className="btt">
@@ -83,9 +75,6 @@ function AnimeDetail() {
               </Link>
 
 </button>
-
-
-
             </div>
           </div>
         ))}
@@ -103,7 +92,7 @@ async function likeAnime(anime_id) {
   const response = await fetch('http://localhost:1337/favor-animes', requestOptions);
   const data = await response.json();
   // this.setState({ postId: data.id });
-  console.log('dd')
+  console.log(data)
 }
 
 export default AnimeDetail;

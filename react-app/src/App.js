@@ -11,12 +11,15 @@ import Account from './features/user/Account';
 import AnimeSelect from './Component/AnimeSelect'
 import UserDetail from './features/user/Userdata';
 import AnimeSearch from './Component/AnimeSearch';
+import ScrollTop from './ScrollTop'
 
 
 
 function App() {
   return (
+    
     <>
+    <ScrollTop/>
       <Navbar />
       <Switch>
         <Route path="/account">
