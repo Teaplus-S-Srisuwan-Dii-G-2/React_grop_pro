@@ -94,15 +94,15 @@ const urlPic='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLudBUAQNGPe
   );
 }
 async function likeAnime(anime_id) {
-  // // POST request using fetch with async/await
-  // const requestOptions = {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify({ anime_id:anime_id})
-  // };
-  // const response = await fetch('http://localhost:1337/favor-animes', requestOptions);
-  // const data = await response.json();
-  // // this.setState({ postId: data.id });
+  // POST request using fetch with async/await
+  const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ anime_id:anime_id})
+  };
+  const response = await fetch('http://localhost:1337/favor-animes', requestOptions);
+  const data = await response.json();
+  // this.setState({ postId: data.id });
   console.log('dd')
 }
 
