@@ -13,12 +13,27 @@ p.col-sm{
     align-items: flex-end
 }
 
-.footer-image {
-    margin-top: 30px;
-    margin-left: 200px;
+.col h4 {
+    display:flex;
+    justify-content: center;
 }
 
-.col img.footer-image{
+.footer-image1 {
+    margin-top: 30px;
+    margin-left: 450px;
+}
+
+.footer-image2 {
+    margin-top: 30px;
+    margin-left: 130px;
+}
+
+.footer-image3 {
+    margin-top: 30px;
+    margin-left: -100px;
+}
+
+.col img.footer-image1,img.footer-image2,img.footer-image3{
     width: 30px;
     height: 30px;
     border-radius: 20px;
