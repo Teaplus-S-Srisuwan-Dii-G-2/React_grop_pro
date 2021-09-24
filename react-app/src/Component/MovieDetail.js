@@ -25,7 +25,7 @@ function AnimeDetail() {
   }, []);
 
   return (
-    <main>
+    <div className="anime-detail-content">
       <center className="animed-topic">
         <p className="animed-topic-title">Anime Detail</p>
       </center>
@@ -65,29 +65,29 @@ function AnimeDetail() {
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />
               </div> */}
 
-<button className="btt">
-              <Link to={`/animeselect/${anime.mal_id}`}>
-                <div class="button-click">
+              <button className="btt">
+                <Link to={`/animeselect/${anime.mal_id}`}>
+                  <div class="button-click">
 
-                  <span className="nextpage">Find out more</span>
+                    <span className="nextpage">Find out more</span>
 
-                </div>
-              </Link>
+                  </div>
+                </Link>
 
-</button>
+              </button>
             </div>
           </div>
         ))}
       </div>
-    </main>
+    </div>
   );
 }
 async function likeAnime(anime_id) {
   // POST request using fetch with async/await
   const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ anime_id:anime_id})
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ anime_id: anime_id })
   };
   const response = await fetch('http://localhost:1337/favor-animes', requestOptions);
   const data = await response.json();
