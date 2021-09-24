@@ -23,15 +23,10 @@ function AnimeSelect() {
   }, []);
 
   return (
+  
     <main>
-      {/* 
-<p>
-    https://api.aniapi.com/v1/anime/?mal_id={id}<br/>
-    https://api.aniapi.com/v1/anime/?mal_id= จากหน้า AnimeDetail.js<br/>
 
-</p> */}
 
-      {/* <div className="anime-row"> */}
       {animes.map((anime) => (
         <div className="anime">
           <div className="anime-banner">
@@ -98,21 +93,32 @@ function AnimeSelect() {
               </ul>
             </div>
           </div>
-
-          <div className="anime-video">
+          {anime.trailer_url == undefined ? (
+            <>
+            </>
+          ) : (
+            <div className="anime-video">
             <h1>
               {anime.titles.en} | Official Trailer ({anime.season_year})
             </h1>
             <iframe src={anime.trailer_url}></iframe>
           </div>
+          )}
+        
+          
 
           {/* <button class="button" >
                         <a href={anime.trailer_url}><span>Find out more</span></a>
                     </button>  */}
+                      <a  href="#">
+       <img  src="https://3.bp.blogspot.com/-UcuzFnHrhPc/VC4NAnls4eI/AAAAAAAAM5E/PsE6swpBg1o/s80/top11.png"/>
+       </a>
         </div>
       ))}
-      {/* </div> */}
+   
+   
     </main>
+
   );
 }
 export default AnimeSelect;
