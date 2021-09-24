@@ -4,6 +4,8 @@ import "./MovieDetail.css";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProducts } from './anime/actions'
+import { Container, Card, Row, Col } from "react-bootstrap";
+import Slideshow from "../features/Indexpage/features/HomePage/SlideShow/Slideshow";
 
 
 function AnimeDetail() {
@@ -25,10 +27,15 @@ function AnimeDetail() {
   }, []);
 
   return (
-    <main>
-      <center className="animed-topic">
-        <p className="animed-topic-title">Anime Detail</p>
-      </center>
+
+
+
+    <div className="anime-detail-content">
+      <div class="header"> 
+        <h1>Anime List</h1>
+        <p>My Anime Japan</p>
+      </div>
+     
       <div className="anime-row">
         {animes.map((anime) => (
           <div className="animed">
@@ -37,7 +44,7 @@ function AnimeDetail() {
                 <ul>
                   <li>
                     {" "}
-                    <p>{anime.titles.en} </p>
+                    <p className="animed-title-us">{anime.titles.en} </p>
                   </li>
                   <li>
                     {" "}
@@ -65,29 +72,31 @@ function AnimeDetail() {
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />
               </div> */}
 
-<button className="btt">
-              <Link to={`/animeselect/${anime.mal_id}`}>
-                <div class="button-click">
+              <button className="btt">
+                <Link to={`/animeselect/${anime.mal_id}`}>
+                  <div class="button-click">
 
-                  <span className="nextpage">Find out more</span>
+                    <span className="nextpage">Find out more</span>
 
-                </div>
-              </Link>
+                  </div>
+                </Link>
 
-</button>
+              </button>
             </div>
           </div>
         ))}
       </div>
-    </main>
+    </div>
+
+
   );
 }
 async function likeAnime(anime_id) {
   // POST request using fetch with async/await
   const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ anime_id:anime_id})
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ anime_id: anime_id })
   };
   const response = await fetch('http://localhost:1337/favor-animes', requestOptions);
   const data = await response.json();
