@@ -1,5 +1,5 @@
 import React from 'react'
-// import './AnimeSearch.css'
+import './AnimeSearch.css'
 import { Link } from "react-router-dom";
 import { Container, Card, Row, Col } from "react-bootstrap";
 
