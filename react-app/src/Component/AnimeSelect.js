@@ -42,6 +42,7 @@ function AnimeSelect() {
           <div className="anime-content">
             <div className="anime-image">
               <img src={anime.cover_image} />
+              <button className="btt-like">LIKE</button>
             </div>
             <div className="anime-text">
               <ul>
@@ -110,9 +111,7 @@ function AnimeSelect() {
           {/* <button class="button" >
                         <a href={anime.trailer_url}><span>Find out more</span></a>
                     </button>  */}
-                      <a  href="#">
-       <img  src="https://3.bp.blogspot.com/-UcuzFnHrhPc/VC4NAnls4eI/AAAAAAAAM5E/PsE6swpBg1o/s80/top11.png"/>
-       </a>
+     
         </div>
       ))}
    

@@ -28,9 +28,12 @@ function SearchContentSearch(props) {
             <div className="animes-area">
                 
             {props.animeList == undefined ? (
+
                 <>
-                <h1> undefined</h1>
-                </>
+                <h1>No Anime is "{props.search}"</h1>
+             </>
+
+
               ) : (
                 props.animeList.map(anime => (
                     <>

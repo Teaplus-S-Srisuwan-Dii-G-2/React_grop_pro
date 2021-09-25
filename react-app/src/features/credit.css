@@ -1,4 +1,4 @@
-.main-footer {
+/* .main-footer {
     margin-top: 10%;
     color: white;
     background-color: black;
@@ -37,4 +37,17 @@ p.col-sm{
     width: 30px;
     height: 30px;
     border-radius: 20px;
+} */
+.main-footer {
+    color: white;
+    background-color: #3b3b3b;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10%;
+  }
+.list-unstyled .footer-iconx{
+    margin: 10px 0;
 }
+

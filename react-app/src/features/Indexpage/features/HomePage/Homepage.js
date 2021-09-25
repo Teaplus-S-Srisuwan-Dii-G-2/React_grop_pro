@@ -30,7 +30,7 @@ export default function HomePage() {
 
   return (
     <>
-    <HomeWrapper>
+    <HomeWrapper >
     {Action.length > 0 ? (
       <>
       <NowPlaying movie={Action} name={"Action"} />

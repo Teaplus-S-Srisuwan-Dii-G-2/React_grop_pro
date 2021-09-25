@@ -16,7 +16,17 @@
 }
 .anime-title{
     margin-top: 3%;
-   }
+   }.btt-like{
+       height: 100px;
+      border-radius: 20px;
+       margin-top: 10%;
+    width: 100%;
+    padding: 6%;
+    font-size: 30px;
+}
+.btt-like .pic-like{
+    width: 100%;
+}
    .anime-title p{
        
        font-size: 50px;
