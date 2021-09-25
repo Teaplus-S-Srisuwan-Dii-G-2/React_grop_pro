@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Router } from 'react-router-dom';
 
 
 import Navbar from './features/Navbar';
@@ -13,11 +13,14 @@ import UserDetail from './features/user/Userdata';
 import AnimeSearch from './Component/AnimeSearch';
 import ScrollTop from './ScrollTop'
 
+import Home from './Component/Home';
+import Login from './Component/Login';
+import SignUp from './Component/SignUp';
+
 
 
 function App() {
   return (
-    
     <>
     <ScrollTop/>
       <Navbar />
@@ -38,8 +41,13 @@ function App() {
           <AnimeSearch />
         </Route>
         <Route path="/">
-          <Slidepage />
-          <Homepage />
+          <Home/>
+        </Route>
+        <Route path="/login">
+          <Login/>
+        </Route>
+        <Route path="/signup">
+          <SignUp/>
         </Route>
         
       </Switch>
