@@ -5,6 +5,7 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 
 function SearchContentSearch(props) {
     return (
+        <>
         <main>
 
 
@@ -25,7 +26,14 @@ function SearchContentSearch(props) {
                 </div>
             </div>
             <div className="animes-area">
-                {props.animeList.map(anime => (
+                
+            {props.animeList == undefined ? (
+                <>
+                <h1> undefined</h1>
+                </>
+              ) : (
+                props.animeList.map(anime => (
+                    <>
                     <Link to={`/animeselect/${anime.mal_id}`}>
                     <React.Fragment>
                         <Col>
@@ -41,6 +49,8 @@ function SearchContentSearch(props) {
                         </Col>
                     </React.Fragment>
                     </Link>
+                    </>
+                
                     // <article className="animes-item">
                     //     <div className="areass-text">
 
@@ -64,11 +74,13 @@ function SearchContentSearch(props) {
 
 
                     // </article>
-                ))}
+                
+                    )))}
             </div>
 
 
         </main>
+        </>
     )
 }
 
