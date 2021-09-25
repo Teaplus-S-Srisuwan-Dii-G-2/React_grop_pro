@@ -14,18 +14,18 @@ export default function NowPlaying({ movie,name }) {
     slidesToScroll: 1
   };
   return (
-    <Container>
+    <Container >
       
       <div className="clearfix mt-5 mb-2">
         <h4 className="float-left">{name}</h4>
       </div>
-      <Slider {...settings}>
+      <Slider {...settings} >
         {movie.map(function(movie) {
           return (
             <Link to={`/animeselect/${movie.mal_id}`}>
             <React.Fragment>
-                <Col>
-                  <Card>
+                <Col className="home"> 
+                  <Card >
                     <Card.Img className="area-1"
                       variant="top"
                       src={movie.cover_image}

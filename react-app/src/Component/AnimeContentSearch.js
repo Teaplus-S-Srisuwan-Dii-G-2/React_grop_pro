@@ -1,10 +1,11 @@
 import React from 'react'
-// import './AnimeSearch.css'
+import './AnimeSearch.css'
 import { Link } from "react-router-dom";
 import { Container, Card, Row, Col } from "react-bootstrap";
 
 function SearchContentSearch(props) {
     return (
+        <>
         <main>
 
 
@@ -25,7 +26,17 @@ function SearchContentSearch(props) {
                 </div>
             </div>
             <div className="animes-area">
-                {props.animeList.map(anime => (
+                
+            {props.animeList == undefined ? (
+
+                <>
+                <h1>No Anime is "{props.search}"</h1>
+             </>
+
+
+              ) : (
+                props.animeList.map(anime => (
+                    <>
                     <Link to={`/animeselect/${anime.mal_id}`}>
                     <React.Fragment>
                         <Col>
@@ -41,6 +52,8 @@ function SearchContentSearch(props) {
                         </Col>
                     </React.Fragment>
                     </Link>
+                    </>
+                
                     // <article className="animes-item">
                     //     <div className="areass-text">
 
@@ -64,11 +77,13 @@ function SearchContentSearch(props) {
 
 
                     // </article>
-                ))}
+                
+                    )))}
             </div>
 
 
         </main>
+        </>
     )
 }
 
