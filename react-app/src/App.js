@@ -16,6 +16,7 @@ import ScrollTop from './ScrollTop'
 
 import Login from './Component/Login';
 import SignUp from './Component/SignUp';
+import {AuthProvider} from './Component/Auth'
 
 
 
@@ -41,10 +42,11 @@ function App() {
           <AnimeSearch />
         </Route>
         <Route path="/login">
-          <Login/>
+          <AuthProvider><Login/></AuthProvider>
+          
         </Route>
         <Route path="/signup">
-          <SignUp/>
+        <AuthProvider><SignUp/></AuthProvider>
         </Route>
         <Route path="/">
           <Slidepage />
