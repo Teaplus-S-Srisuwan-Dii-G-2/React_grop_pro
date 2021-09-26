@@ -27,7 +27,7 @@ function navbar({className}) {
       
     </Nav>
     <Nav>
-   <Nav.Link > <Link to="/account"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</Link></Nav.Link>
+   <Nav.Link > <Link to="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</Link></Nav.Link>
        <Nav.Link ><Link to="/user"><i class="fa fa-user-circle-o " aria-hidden="true"></i> Profile</Link></Nav.Link>
       
    

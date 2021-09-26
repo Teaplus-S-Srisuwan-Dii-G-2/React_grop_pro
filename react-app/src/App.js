@@ -13,7 +13,7 @@ import UserDetail from './features/user/Userdata';
 import AnimeSearch from './Component/AnimeSearch';
 import ScrollTop from './ScrollTop'
 
-import Home from './Component/Home';
+
 import Login from './Component/Login';
 import SignUp from './Component/SignUp';
 
@@ -40,15 +40,17 @@ function App() {
         <Route path="/search">
           <AnimeSearch />
         </Route>
-        <Route path="/">
-          <Home/>
-        </Route>
         <Route path="/login">
           <Login/>
         </Route>
         <Route path="/signup">
           <SignUp/>
         </Route>
+        <Route path="/">
+          <Slidepage />
+          <Homepage />
+        </Route>
+        
         
       </Switch>
       <Credit />
