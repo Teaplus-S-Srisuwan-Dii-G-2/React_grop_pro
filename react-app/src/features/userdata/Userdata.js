@@ -16,6 +16,7 @@ import './userdata.css'
 
 export default function Userdata() {
   const  { currentUser }  = useContext(AuthContext);
+  
 
   async function gatalldataanime() {
     await Axios.get(
@@ -28,33 +29,64 @@ export default function Userdata() {
     gatalldataanime();
 
   }, []);
-
-  return (
-    <>
-      <div className="account">
-        <h1>User</h1>
-        <hr />
-        <Container >
-          <div className="flex-container">
-            <div className="user-item">
-
-              <div className="user-profile">
-
-                <img className="profile" src="https://artsofcarvercounty.org/wp-content/uploads/2015/01/SteveProfile-171x180.png" />
+  if(currentUser){
+    return (
+      <>
+        <div className="account">
+          <h1>User</h1>
+          <hr />
+          <Container >
+            <div className="flex-container">
+              <div className="user-item">
+  
+                <div className="user-profile">
+  
+                  <img className="profile" src="https://artsofcarvercounty.org/wp-content/uploads/2015/01/SteveProfile-171x180.png" />
+                </div>
+  
+  
+                <h1>{currentUser.email}</h1>
               </div>
-
-
-              <h1>{currentUser.email}</h1>
             </div>
-          </div>
-
-        </Container>
-        <h1>Favorite Anime</h1>
-        <Container>
-
-        </Container>
-        <hr />
-      </div>
-    </>
-  );
+  
+          </Container>
+          <h1>Favorite Anime</h1>
+          <Container>
+  
+          </Container>
+          <hr />
+        </div>
+      </>
+    );
+  }else {
+    return (
+      <>
+        <div className="account">
+          <h1>User</h1>
+          <hr />
+          <Container >
+            <div className="flex-container">
+              <div className="user-item">
+  
+                <div className="user-profile">
+  
+                  <img className="profile" src="https://artsofcarvercounty.org/wp-content/uploads/2015/01/SteveProfile-171x180.png" />
+                </div>
+  
+  
+                <h1>Tom Smith</h1>
+              </div>
+            </div>
+  
+          </Container>
+          <h1>Favorite Anime</h1>
+          <Container>
+  
+          </Container>
+          <hr />
+        </div>
+      </>
+    );
+  }
+  
 };
