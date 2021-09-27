@@ -9,6 +9,7 @@ import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import '../features/userdata/userdata.css'
 import '../features/card.css'
+import firebaseConfig from '../config';
 function navbar({className}) {
     return (
       
@@ -29,6 +30,7 @@ function navbar({className}) {
     <Nav>
    <Nav.Link > <Link to="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</Link></Nav.Link>
        <Nav.Link ><Link to="/user"><i class="fa fa-user-circle-o " aria-hidden="true"></i> Profile</Link></Nav.Link>
+       <button onClick={() => firebaseConfig.auth().signOut()} class="btn btn-danger">Sign Out</button>
       
    
     </Nav>

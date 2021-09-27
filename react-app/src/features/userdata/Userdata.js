@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import Image from "react-bootstrap/Image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../account/account.css";
@@ -7,11 +7,15 @@ import Row from 'react-bootstrap/Row'
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Axios from "axios";
+import { AuthContext } from '../../Component/Auth'
+
 
 
 import './userdata.css'
 
+
 export default function Userdata() {
+  const  { currentUser }  = useContext(AuthContext);
 
   async function gatalldataanime() {
     await Axios.get(
@@ -40,7 +44,7 @@ export default function Userdata() {
               </div>
 
 
-              <h1>Tom Smith</h1>
+              <h1>{currentUser.email}</h1>
             </div>
           </div>
 
