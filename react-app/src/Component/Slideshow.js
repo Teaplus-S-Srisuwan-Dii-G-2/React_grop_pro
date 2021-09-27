@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import Axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import styled from "styled-components";
-import "../nowplaying/nowplay.css";
+import "./nowplay.css";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts } from '../../../../../Component/anime/actions';
+import { fetchProducts } from '../Component/anime/actions';
 function ControlledCarousel() {
   const animes = useSelector((state) => state.animes);
   const dispatch = useDispatch();

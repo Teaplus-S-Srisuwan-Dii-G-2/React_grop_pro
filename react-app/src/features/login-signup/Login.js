@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Redirect } from 'react-router-dom'
-import { AuthContext } from './Auth'
-import firebaseConfig from '../config'
+import { AuthContext } from '../../Component/Auth'
+import firebaseConfig from '../../config'
 
 const LogIn = () => {
 

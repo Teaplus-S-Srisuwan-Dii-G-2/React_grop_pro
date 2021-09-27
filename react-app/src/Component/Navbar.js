@@ -7,8 +7,8 @@ import Nav from 'react-bootstrap/Nav'
 import  Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
-import './user/userdata.css'
-import './card.css'
+import '../features/userdata/userdata.css'
+import '../features/card.css'
 function navbar({className}) {
     return (
       

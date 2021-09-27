@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import "./AnimeSelect.css";
 import Axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts } from "./anime/actions";
+import { fetchProducts } from "../../Component/anime/actions";
 
 function AnimeSelect() {
   const { id } = useParams();

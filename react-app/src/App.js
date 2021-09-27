@@ -2,20 +2,20 @@ import React from 'react';
 import { Switch, Route, Router } from 'react-router-dom';
 
 
-import Navbar from './features/Navbar';
-import Credit from './features/Credit';
-import Homepage from './features/Indexpage/features/HomePage/Homepage';
-import Slidepage from './features/Indexpage/features/HomePage/SlideShow/Slideshow';
-import MovieDetail from './Component/MovieDetail';
-import Account from './features/user/Account';
-import AnimeSelect from './Component/AnimeSelect'
-import UserDetail from './features/user/Userdata';
-import AnimeSearch from './Component/AnimeSearch';
+import Navbar from './Component/Navbar';
+import Credit from './Component/Credit';
+import Homepage from './features/homepage/Homepage';
+import Slidepage from './Component/Slideshow';
+import MovieDetail from './features/moviedetail/MovieDetail';
+import Account from './features/account/Account';
+import AnimeSelect from './features/animeselect/AnimeSelect'
+import UserDetail from './features/userdata/Userdata';
+import AnimeSearch from './features/animeSearch/AnimeSearch';
 import ScrollTop from './ScrollTop'
 
 
-import Login from './Component/Login';
-import SignUp from './Component/SignUp';
+import Login from './features/login-signup/Login';
+import SignUp from './features/login-signup/SignUp';
 import {AuthProvider} from './Component/Auth'
 
 

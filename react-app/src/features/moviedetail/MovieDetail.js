@@ -3,9 +3,8 @@ import { useEffect } from "react";
 import "./MovieDetail.css";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProducts } from './anime/actions'
-import { Container, Card, Row, Col } from "react-bootstrap";
-import Slideshow from "../features/Indexpage/features/HomePage/SlideShow/Slideshow";
+import { fetchProducts } from '../../Component/anime/actions'
+
 
 
 function AnimeDetail() {

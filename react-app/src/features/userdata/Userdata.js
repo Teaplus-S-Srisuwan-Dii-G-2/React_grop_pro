@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "react-bootstrap/Image";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./account.css";
+import "../account/account.css";
 import { Button } from "react-bootstrap";
 import Row from 'react-bootstrap/Row'
 import Container from "react-bootstrap/Container";
