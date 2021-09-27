@@ -30,7 +30,7 @@ function App() {
           <Account />
         </Route>
         <Route path="/user">
-          <UserDetail />
+        <AuthProvider><UserDetail /></AuthProvider>
         </Route>
         <Route path="/animeselect/:id">
           <AnimeSelect />
