@@ -42,7 +42,7 @@ function AnimeSelect() {
           <div className="anime-content">
             <div className="anime-image">
               <img src={anime.cover_image} />
-              <button className="btt-like" onClick={() => { likeAnime(anime.mal_id) }}>LIKE</button>
+              {/* <button className="btt-like" onClick={() => { likeAnime(anime.mal_id) }}>LIKE</button> */}
             </div>
             <div className="anime-text">
               <ul>

@@ -63,9 +63,10 @@ function AnimeDetail() {
               </div>
             </div>
             <div className="animed-button">
-              <div className="icon">
+
+              {/* <div className="icon">
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />
-              </div>
+              </div> */}
 
               {/* <div className="icon">
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />

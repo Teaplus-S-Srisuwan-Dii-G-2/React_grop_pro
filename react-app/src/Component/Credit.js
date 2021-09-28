@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./credit.css";
+import { Link } from "react-router-dom";
 
 
 const Credit = () => {
@@ -46,29 +47,49 @@ const Credit = () => {
                 <div className="row">
                     {/* Column1 */}
                     <div className="col">
-                        <h4>COMPANYNAME</h4>
-                        <ui className="list-unstyled">
+                        <h4>COMPANY</h4>
+                        <ui className="list-unstyled"> 
+                         <li>RSV COMPANY</li>
                             <li>Chiang Mai CNX, 50200,TH</li>
-                            <li>rsvanimeinfo@gmail.com</li>
+                          
                         </ui>
                     </div>
                     {/* Column2 */}
                     <div className="col">
-                        <h4>ANIME</h4>
+                        <h4>TOP ANIME</h4>
                         <ui className="list-unstyled">
-                            <li>GITAMA</li>
-                            <li>ONEPICE</li>
-                            <li>CONAN</li>
+<li><Link to="https://api.aniapi.com/v1/anime/?mal_id=39486">GITAMA</Link></li>
+<li><Link to="https://api.aniapi.com/v1/anime/?mal_id=42938">Fruits Basket: The Final</Link></li>
+<li><Link to="https://api.aniapi.com/v1/anime/?mal_id=40028">Shingeki no Kyojin: The Final Season</Link></li>
+
+
+                           
+                         
                         </ui>
                     </div>
                     {/* Column3 */}
                     <div className="col">
                         <h4>USEFUL LINKS</h4>
                         <ui className="list-unstyled">
-                            <li>HOME</li>
-                            <li>Anime List</li>
+<li><Link to="/"><i class="fa fa-home" aria-hidden="true"></i> Home</Link></li>
+                      
+<li><Link to="/topanime"><i class="fa fa-list-ul" aria-hidden="true"></i> Anime List</Link></li>
+<li><Link to="/search"><i class="fa fa-search" aria-hidden="true"></i> Anime Search</Link></li>
+
+      {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
+      
+   
+  
+    
+       {/* <button onClick={() => firebaseConfig.auth().signOut()} class="btn btn-danger">Sign Out</button> */}
+
+       <li><Link to="/user"><i class="fa fa-user-circle-o " aria-hidden="true"></i> Profile</Link></li>
+       <li><Link to="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</Link></li>
+       {/* <i class="fa fa-sign-out" aria-hidden="true" onClick={() => firebaseConfig.auth().signOut()}></i>Sign Out */}
+                      
+                            {/* <li>Anime List</li>
                             <li>Search Anime</li>
-                            <li>Login</li>
+                            <li>Login</li> */}
 
 
                         </ui>

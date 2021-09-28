@@ -6,6 +6,10 @@ import { useSelector, useDispatch } from 'react-redux';
 const urlPic = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLudBUAQNGPerdvGD3gHqObUr1mYm7lk383w&usqp=CAU'
 
 function SearchContentSearch(props) {
+
+  function name(params) {
+    
+  }
   return (
     
     <>
@@ -33,12 +37,16 @@ function SearchContentSearch(props) {
 
           {props.animeList == undefined ? (
 
-            <>
-              <h1>No Anime is "{props.search}"</h1>
-            </>
+          <div >
+             <h5>No Anime is "{props.search}"</h5>
+          </div>
+             
+            
 
 
-          ) : (
+          ) : 
+          
+          (
 
             props.animeList.map(anime => (
               // <>
@@ -86,9 +94,9 @@ function SearchContentSearch(props) {
               </div>
             </div>
             <div className="animed-button">
-              <div className="icon">
+              {/* <div className="icon">
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />
-              </div>
+              </div> */}
 
               {/* <div className="icon">
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />

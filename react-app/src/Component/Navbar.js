@@ -28,10 +28,13 @@ function navbar({className}) {
       
     </Nav>
     <Nav>
-   <Nav.Link > <Link to="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</Link></Nav.Link>
-       <Nav.Link ><Link to="/user"><i class="fa fa-user-circle-o " aria-hidden="true"></i> Profile</Link></Nav.Link>
-       <button onClick={() => firebaseConfig.auth().signOut()} class="btn btn-danger">Sign Out</button>
-      
+  
+    
+       {/* <button onClick={() => firebaseConfig.auth().signOut()} class="btn btn-danger">Sign Out</button> */}
+
+     <Nav.Link ><Link to="/user"><i class="fa fa-user-circle-o " aria-hidden="true"></i> Profile</Link></Nav.Link>
+    <Nav.Link > <Link to="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</Link></Nav.Link>
+       <Nav.Link > <i class="fa fa-sign-out" aria-hidden="true" onClick={() => firebaseConfig.auth().signOut()}></i>Sign Out</Nav.Link>
    
     </Nav>
   </Navbar.Collapse>
