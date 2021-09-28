@@ -3,7 +3,7 @@ import './AnimeSearch.css'
 import { Link } from "react-router-dom";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from 'react-redux';
-const urlPic = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLudBUAQNGPerdvGD3gHqObUr1mYm7lk383w&usqp=CAU'
+const urlPic = 'https://i.pinimg.com/736x/f8/2b/b1/f82bb1b3bb1df050238910c0f8632491.jpg'
 
 function SearchContentSearch(props) {
 
@@ -94,9 +94,9 @@ function SearchContentSearch(props) {
               </div>
             </div>
             <div className="animed-button">
-              {/* <div className="icon">
+              <div className="icon">
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />
-              </div> */}
+              </div>
 
               {/* <div className="icon">
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />

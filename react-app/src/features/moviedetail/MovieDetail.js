@@ -11,7 +11,7 @@ function AnimeDetail() {
   //   const [topAnime, SetTopAnime] = useState([]);
   const animes = useSelector((state) => state.animes);
   const dispatch = useDispatch();
-  const urlPic = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLudBUAQNGPerdvGD3gHqObUr1mYm7lk383w&usqp=CAU'
+  const urlPic = 'https://i.pinimg.com/736x/f8/2b/b1/f82bb1b3bb1df050238910c0f8632491.jpg'
   const GetTopAnime = async () => {
     const temp = await fetch(`https://api.aniapi.com/v1/anime`).then((res) =>
       res.json()
@@ -68,9 +68,9 @@ function AnimeDetail() {
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />
               </div> */}
 
-              {/* <div className="icon">
+              <div className="icon">
                 <img src={urlPic} class="button-like" onClick={() => { likeAnime(anime.mal_id) }} />
-              </div> */}
+              </div>
 
               <button className="btt">
                 <Link to={`/animeselect/${anime.mal_id}`}>

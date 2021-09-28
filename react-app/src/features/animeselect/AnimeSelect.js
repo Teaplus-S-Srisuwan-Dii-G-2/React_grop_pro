@@ -28,6 +28,7 @@ function AnimeSelect() {
 
 
       {animes.map((anime) => (
+        
         <div className="anime">
           <div className="anime-banner">
             <img className="anime-image" src={anime.banner_image} />
@@ -40,9 +41,11 @@ function AnimeSelect() {
           </div>
 
           <div className="anime-content">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+
             <div className="anime-image">
               <img src={anime.cover_image} />
-              {/* <button className="btt-like" onClick={() => { likeAnime(anime.mal_id) }}>LIKE</button> */}
+              <button className="btt-like" onClick={() => { likeAnime(anime.mal_id) }}><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>&nbsp; LIKE</button>
             </div>
             <div className="anime-text">
               <ul>

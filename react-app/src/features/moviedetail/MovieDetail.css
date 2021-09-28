@@ -123,15 +123,15 @@ width: 100%;
     text-align: center;
   } */
   .animed-button{
-    height: 100px;
+    height: 80px;
 
     
     grid-gap:2%;
     width: 100%;
-    /* display: grid; */
-    /* grid-template-columns: 30% 68%; */
-    /* align-items: center;
-    justify-content: center; */
+    display: grid; 
+     grid-template-columns: 30% 68%;
+    align-items: center;
+    justify-content: center;
     
   }
 

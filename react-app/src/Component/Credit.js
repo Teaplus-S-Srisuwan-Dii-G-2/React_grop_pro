@@ -58,9 +58,9 @@ const Credit = () => {
                     <div className="col">
                         <h4>TOP ANIME</h4>
                         <ui className="list-unstyled">
-<li><Link to="https://api.aniapi.com/v1/anime/?mal_id=39486">GITAMA</Link></li>
-<li><Link to="https://api.aniapi.com/v1/anime/?mal_id=42938">Fruits Basket: The Final</Link></li>
-<li><Link to="https://api.aniapi.com/v1/anime/?mal_id=40028">Shingeki no Kyojin: The Final Season</Link></li>
+<li><Link to="#">GITAMA</Link></li>
+<li><Link to="#">Fruits Basket: The Final</Link></li>
+<li><a href="#">Shingeki no Kyojin: The Final Season</a></li>
 
 
                            
