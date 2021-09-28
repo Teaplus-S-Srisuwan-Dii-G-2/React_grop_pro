@@ -2,7 +2,9 @@
 
 
 /*todo Search Button */
-
+.anime-detail-content{
+	min-height: 600px;
+}
 .wrapper{
     
 	min-height: 30vh;
