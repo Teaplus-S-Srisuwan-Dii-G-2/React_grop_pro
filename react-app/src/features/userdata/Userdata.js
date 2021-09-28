@@ -50,10 +50,10 @@ export default function Userdata() {
             </div>
   
           </Container>
-          <h1>Favorite Anime</h1>
+          {/* <h1>Favorite Anime</h1>
           <Container>
   
-          </Container>
+          </Container> */}
           <hr />
         </div>
       </>

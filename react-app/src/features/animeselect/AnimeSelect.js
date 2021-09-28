@@ -42,7 +42,7 @@ function AnimeSelect() {
           <div className="anime-content">
             <div className="anime-image">
               <img src={anime.cover_image} />
-              <button className="btt-like">LIKE</button>
+              <button className="btt-like" onClick={() => { likeAnime(anime.mal_id) }}>LIKE</button>
             </div>
             <div className="anime-text">
               <ul>
@@ -120,4 +120,18 @@ function AnimeSelect() {
 
   );
 }
+
+async function likeAnime(anime_id) {
+  // POST request using fetch with async/await
+  const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ anime_id: anime_id })
+  };
+  const response = await fetch('http://localhost:1337/favor-animes', requestOptions);
+  const data = await response.json();
+  // this.setState({ postId: data.id });
+  console.log(data)
+}
+
 export default AnimeSelect;
