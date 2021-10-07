@@ -27,7 +27,7 @@
 ![](https://user-images.githubusercontent.com/84006875/135225220-b3902660-0a64-4df0-bfeb-a0bf1f315ae6.PNG)
 
 
-## anime-Serach
+## anime-Search
 ![](https://user-images.githubusercontent.com/84006875/135225242-edbc0263-78fb-4802-a43f-81d93ab06bcd.PNG)
 
 
