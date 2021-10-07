@@ -1,0 +1,64 @@
+ <!-- 
+ <div class="col-4">
+                <div class="card" style="width:100%">
+                    <img src="<%= im2 %> " alt="" srcset="">
+                </div>
+                <div class="card-body">
+
+                    <h4>
+                        <%= ten2 %>
+                    </h4>
+                    <h5>
+                        <%= tjp2 %>
+                    </h5>
+                    <p>Address URL:<br>
+                        <%= lk2 %>
+                    </p>
+                    <a href="<%= lk2 %>"  rel="noopener noreferrer">Page Current</a>
+                   
+                    <a href="<%= lk2 %>"target="_blank">New Tap</a>
+                </div>
+
+
+            </div>
+            <div class="col-4">
+                <div class="card" style="width:100%">
+                    <img src="<%= im3 %> " alt="" srcset="">
+                </div>
+                <div class="card-body">
+
+                    <h4>
+                        <%= ten3 %>
+                    </h4>
+                    <h5>
+                        <%= tjp3 %>
+                    </h5>
+                    <p>Address URL:<br>
+                        <%= lk3 %>
+                    </p>
+                    <a href="<%= lk3 %>"  rel="noopener noreferrer">Page Current</a>
+                   
+                    <a href="<%= lk3 %>"target="_blank">New Tap</a>
+                </div>
+
+
+            </div>
+            <div class="col-4">
+                <div class="card" style="width:100%">
+                    <img src="<%= im4 %> " alt="" srcset="">
+                </div>
+                <div class="card-body">
+
+                    <h4>
+                        <%= ten4 %>
+                    </h4>
+                    <h5>
+                        <%= tjp4 %>
+                    </h5>
+                    <p>Address URL:<br>
+                        <%= lk4 %>
+                    </p>
+                    <a href="<%= lk4 %>"  rel="noopener noreferrer">Page Current</a>
+                   
+                    <a href="<%= lk4 %>"target="_blank">New Tap</a>
+                </div> -->
