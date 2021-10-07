@@ -7,9 +7,9 @@
 > - small Slide-card : Action
 > - small Slide-card : Comedy
 > - small Slide-card : Drama
+> หน้า Homepage แสดงอนิเมะโดยแบ่งเป็นหมวดหมู่ประเภทของอนิเมะ เช่น action drama comedy
 
 
-## Homepage
 ![](https://user-images.githubusercontent.com/84006875/135225189-146e6705-d079-425f-9f96-cfe53a48fc29.PNG)
 
 
