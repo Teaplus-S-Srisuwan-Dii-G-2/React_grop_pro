@@ -44,4 +44,4 @@
 ### local api 
 
 >use for like function
-
+>การทำงานของ API นี้ คือรับ ค่า anime id มาเพื่อให้แสดงข้อมูลต่างๆของ anime ทั้งหมด
