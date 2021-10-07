@@ -37,6 +37,8 @@
 ## API-in-use
 
 ### https://api.aniapi.com/v1/anime
+![](https://cdn.discordapp.com/attachments/891247975685292052/895739776731320320/unknown.png)
+![](https://cdn.discordapp.com/attachments/891247975685292052/895739908923219978/unknown.png)
 >การทำงานของ API นี้ คือรับ ค่า anime id มาเพื่อให้แสดงข้อมูลต่างๆของ anime ทั้งหมด
 
 ### https://github.com/Teaplus-S-Srisuwan-Dii-G-2/reactmookapi
